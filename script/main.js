@@ -9,7 +9,7 @@ $(document).ready(function () {
   var randomNumber = 0;
   var boxContainer = $('.boxes--container');
   var btnAutoGrid = $('#button--auto-grid');
-  var btnExercise = $('#button-exercise');
+  var btnExercise = $('#button--exercise');
   var apiUrl = 'https://flynn.boolean.careers/exercises/api/random/int';
   
 
@@ -22,17 +22,15 @@ $(document).ready(function () {
     boxContainer.children().remove();
     for (var i = 0; i< 36; i++){
       // Handlebars Config
-      var source = $("#message-template").html();
+      var source = $("#box-template").html();
       var template = Handlebars.compile(source);
-      // Creation of Object box
-      // Get html template with dinamic values
       var html = template();
-      // Add html template on chat container and clean inputbox
+      // Add html template on box container
       boxContainer.addClass('exercise').append(html).hide().fadeIn(300); 
     }
   })
 
-  // Click on Box management
+  // Check random number on box click
   $('#app').on('click', '.box', function(){
     var box = $(this);
     $.ajax({
@@ -70,7 +68,7 @@ $(document).ready(function () {
         success: function (data){
           randomNumber = data.response;
           // Handlebars Config
-          var source = $("#message-template").html();
+          var source = $("#box-template").html();
           var template = Handlebars.compile(source);
           // Creation of Object box
           var box = {
@@ -78,7 +76,7 @@ $(document).ready(function () {
           }
           // Get html template with dinamic values
           var html = template(box);
-          // Add html template on chat container and clean inputbox
+          // Add html template on box container
           boxContainer.addClass('bonus').append(html); 
         },
         error: function(){
