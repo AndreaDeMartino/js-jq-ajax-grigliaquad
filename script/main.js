@@ -11,6 +11,7 @@ $(document).ready(function () {
   var btnAutoGrid = $('#button--auto-grid');
   var btnExercise = $('#button-exercise');
   var apiUrl = 'https://flynn.boolean.careers/exercises/api/random/int';
+  
 
   /****************************************************
   * EXERCISE
@@ -18,6 +19,7 @@ $(document).ready(function () {
 
   // Generate 36 Boxes with "EXERCISE" Button
   btnExercise.click(function(){
+    boxContainer.children().remove();
     for (var i = 0; i< 36; i++){
       // Handlebars Config
       var source = $("#message-template").html();
@@ -58,6 +60,7 @@ $(document).ready(function () {
 
   // Generate custom grid with "AUTO GRID" button
   btnAutoGrid.click(function(){
+    boxContainer.children().remove();
     var gridNumber = parseInt(prompt('Inserisci il numero dei box (ogni riga è formata da 6 elementi)'));
     for (var i = 0; i< gridNumber; i++){
       // Api
