@@ -1,0 +1,93 @@
+/* General Rules */
+
+
+/* Utility */
+.button{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #354049;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  font-size: 25px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  transition: font-size 0.4s;
+  cursor: pointer;
+}
+
+.button:hover{
+  background: #477aa5;
+  opacity: 0.8;
+  font-size: 30px;
+}
+
+/* App */
+#app{
+  width: 100%;
+  height: 100vh;
+  background: #35414A;
+  display: flex;
+}
+
+/* Sidebar */
+.main--sidebar{
+  min-width: 300px;
+  height: 100%;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #718492;
+}
+
+.sidebar--item{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Content */
+.main--content{
+  flex-grow: 1;
+  background: #35414A;
+}
+
+.boxes--container{
+  width: 1200px;
+  min-height: 600px;
+  max-height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  flex-basis: calc(100%/6);
+  min-height: 30px;
+  background: #485761;
+  border: 1px solid rgb(148, 195, 231, 0.1);
+  transition: opacity 0.3s;
+}
+
+.box:hover{
+  opacity: 0.8;
+}
+
+.box--text{
+  color: #5BAFEE;
+  font-size: 30px;
+}
+
+.box.box__yellow{
+  background: #feca57;
+}
+
+.box.box__green{
+  background: #10ac84;
+}

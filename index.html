@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>TITLE</title>
+</head>
+<body class="u-montserrat u-flex-center">
+  <div id="app">
+
+    <!-- SIDEBAR -->
+    <sidebar class="main--sidebar">
+
+      <div class="sidebar--item">
+        <div class="button u-flex-center" id ="button--auto-grid">
+          AUTO GRID
+        </div>
+      </div>
+      <div class="sidebar--item">
+        <div class="button u-flex-center" id="button-exercise">
+          EXERCISE
+        </div>
+      </div>
+      <div class="sidebar--item">
+        <div class="button u-flex-center">
+          INFO
+        </div>
+      </div>
+
+    </sidebar>
+
+    <!-- CONTENT -->
+    <main class="main--content u-flex-center">
+      <div class="boxes--container">
+        <!-- ** Handlebars here ** -->
+      </div>
+    </main>
+
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="message-template" type="text/x-handlebars-template">
+    <div class="box u-flex-center">
+      <span class="box--text">
+        {{ number }}
+      </span>
+    </div>
+  </script>
+
+
+  <!-- jQuery -->
+  <script 
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script>
+  <!-- Handlebars -->
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <!-- My JS -->
+  <script src="script/main.js"></script>
+
+</body>
+</html>
